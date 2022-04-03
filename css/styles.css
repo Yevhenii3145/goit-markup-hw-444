@@ -104,12 +104,29 @@ img {
 }
 
 .nav-header-contacts {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     color: rgba(117, 117, 117, 1);
-    transition: 0.35s;
+    transition: 0.4s;
 }
+.contacts-icon {
+    margin-right: 10px;
+    max-width: 16px;
+    max-height: 16px;
+    fill: #757575;
+    outline: 1px solid red;
+    transition: 0.4s;
+}
+.nav-header-contacts:hover {
+    color: var(--main-hover-focus-font-color);
+}
+.nav-header-contacts:hover .contacts-icon {
+    fill: var(--main-hover-focus-font-color)
+}
+
 .gray-border {
     border-bottom: 1px solid #ECECEC;
 }
@@ -142,6 +159,7 @@ img {
     padding: 10px 32px;
     background-color: var(--button-hover-focus-back-color);
     border-radius: 4px;
+    border: none;
 
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -176,6 +194,19 @@ img {
 }
 .space-peculiar {
     justify-content: space-between;
+}
+.our-peculiarities-itemdecor {
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+.our-peculiarities-icon {
+    max-width: 70px;
+    max-height: 70px;
+    outline: 1px solid red;
+    /* background-color: #F5F4FA; */
+    margin: 25px 100px;
+
 }
 .peculiar-header {
     font-size: 14px;
@@ -244,6 +275,7 @@ img {
     height: 108px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    outline: 1px solid red;
     
 }
 
@@ -264,6 +296,16 @@ img {
     text-align: center;
     background-color: var(--main-back-color);
        
+}
+.card-item-icon {
+    max-width: 44px;
+    max-height: 44px;
+    fill: #AFB1B8;
+    outline: 1px solid red;
+    transition: 0.4s;
+}
+.card-item-icon:hover {
+    background-color: #2196F3;
 }
 /* Подвал */
 .footer {
