@@ -1,6 +1,9 @@
 
 /* font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif; */
+/* target="_blank"
+после href */
+
 
 :root {
     --main-back-color: rgba(255, 255, 255, 1);
@@ -117,7 +120,7 @@ img {
     max-width: 16px;
     max-height: 16px;
     fill: #757575;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     transition: 0.4s;
 }
 .nav-header-contacts:hover {
@@ -203,7 +206,7 @@ img {
 .our-peculiarities-icon {
     max-width: 70px;
     max-height: 70px;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     /* background-color: #F5F4FA; */
     margin: 25px 100px;
 
@@ -240,10 +243,10 @@ img {
 }
 /* Наша команда */
 .our-comand {
-    max-width: 1600px;
     background-color: var(--another-back-color);
     padding-top: var(--main-section-padding);
     padding-bottom: var(--main-section-padding);
+    
 }
 .our-header {
     font-size: 36px;
@@ -266,16 +269,16 @@ img {
 .card-item {
     display: flex;
     flex-direction: column;
-    height: 368px;
+    /* height: 368px; */
     width: 270px;
     background-color: var(--main-back-color);
 }
 .card-container {
-    padding: 30px 60px;
-    height: 108px;
+    background-color: var(--main-back-color);
+    padding: 30px 32px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     
 }
 
@@ -285,34 +288,90 @@ img {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-    background-color: var(--main-back-color);
+    /* background-color: var(--main-back-color); */
     margin-top: 0;   
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     
 }
 .card-item-text {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-    background-color: var(--main-back-color);
+    margin-bottom: 16px;
+    /* background-color: var(--main-back-color); */
        
 }
-.card-item-icon {
-    max-width: 44px;
-    max-height: 44px;
-    fill: #AFB1B8;
-    outline: 1px solid red;
+.card-item-social-list {
+    display: flex;
+}
+.card-item-social-item {
+    margin-right: 10px;
+}
+.card-item-social-item:last-child {
+    margin-right: 0;
+}
+.card-item-social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: 0.4s;
 }
-.card-item-icon:hover {
-    background-color: #2196F3;
+.card-item-social-icon {
+    max-width: 20px;
+    max-height: 20px;
+    fill: #AFB1B8;
+    /* outline: 1px solid red; */
+    transition: 0.4s;
 }
+.card-item-social-link:hover {
+    background-color: var(--main-hover-focus-font-color);
+}
+.card-item-social-link:hover .card-item-social-icon {
+    fill: #fff;
+}
+/* Наши клиенты */
+.our-clients {
+
+    /* padding-top: var(--main-section-padding);
+    padding-bottom: var(--main-section-padding); */
+    padding: var(--main-section-padding) 0px;
+}
+.our-clients-list {
+    display: flex;
+    justify-content: space-between;
+}
+.our-clients-item {
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+}
+.our-clients-icon {
+    width: 170px;
+    height: 92px;
+    fill: #AFB1B8;
+    /* outline: 1px solid red; */
+    transition: 0.9s; 
+}
+.our-clients-icon:hover {
+    fill: var(--main-hover-focus-font-color);
+}
+
 /* Подвал */
 .footer {
-    max-width: 1600px;
+    max-width: 100vw;
     background-color: rgba(47, 48, 58, 1);
     padding-top: 60px;
     padding-bottom: 60px;
+}
+.footer .container {
+    display: flex;
+}
+.ferst-box {
+    /* max-width: 230px; */
+    margin-right: 70px;
 }
 .span-f {
     color: var(--button-hover-focus-font-color);
@@ -346,6 +405,26 @@ img {
     color: var(--footer-hover-focus-color);
     cursor: pointer;
 }
+.second-box {
+    padding-top: 12px;
+}
+.footer-second-header {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.second-box .card-item-social-link {
+    background-color: rgba(255, 255, 255,0.1);
+}
+.second-box .card-item-social-link:hover {
+    background-color: var(--footer-hover-focus-color);
+}
+
+
 /* Верхняя линия портфолио */
 .portfolio-activ {
     color: var(--main-hover-focus-font-color);
@@ -375,6 +454,8 @@ img {
     border-color: #F5F4FA;
     border-radius: 4px;
     margin-right: 8px;
+    border: none;
+    /* color: rgba(red, green, blue, alpha); */
 }
 .btn-all:hover,
 .btn-all:focus,
@@ -389,6 +470,7 @@ img {
     background-color: var(--button-hover-focus-back-color);
     color: var(--button-hover-focus-font-color);
     cursor: pointer;
+    box-shadow: 0px 3px 1px rgb(229, 229, 229, 0.8);
 } 
 .portfolio-content {
     display: flex;
@@ -401,7 +483,13 @@ img {
     /* max-width: calc((100%-60px) / 3);
     margin-right: 30px; */
 }
-/* .portfolio-item:nth-child(3n + 3) {
+
+.portfolio-item:hover {
+    box-shadow: 1px 6px 6px rgb(229, 229, 229, 0.9);
+}
+
+/*
+ .portfolio-item:nth-child(3n + 3) {
     margin-right: 0px;
 } */
 .portfolio-item:nth-last-child(-n + 3) {
